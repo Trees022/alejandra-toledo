@@ -1,128 +1,148 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Alejandra Toledo - Artista Visual</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f4f1ec;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f3efe6;
+      color: #333;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: auto;
+      padding: 20px;
     }
 
     .card {
-      max-width: 700px;
-      margin: 40px auto;
-      background-color: #ffffffcc;
-      border-radius: 15px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-      overflow: hidden;
-      border: 2px solid #8b5e3c;
-    }
-
-    .header {
-      background-color: #8b5e3c;
-      padding: 25px;
-      color: white;
+      background-color: #fffdf9;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
       text-align: center;
     }
 
-    .header img {
-      width: 120px;
-      height: 120px;
+    .profile-pic {
+      width: 140px;
+      height: 140px;
       object-fit: cover;
       border-radius: 50%;
-      border: 4px solid white;
-      margin-top: 15px;
+      border: 4px solid #d8a86f;
+      box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      font-size: 2em;
+      margin: 15px 0 5px;
+      color: #4a3520;
+    }
+
+    .subtitle {
+      font-size: 1.2em;
+      color: #7a5c3b;
+      margin-bottom: 15px;
     }
 
     .slogan {
-      padding: 20px;
-      background-color: #f1f1f1;
-      text-align: center;
-    }
-
-    .slogan h3 {
       font-style: italic;
-      color: #5a3825;
+      font-size: 1.1em;
+      margin: 10px 0;
+      color: #8c5f3a;
     }
 
-    .slogan p {
-      font-size: 15px;
-      color: #3c2b21;
-      line-height: 1.6;
-      margin-top: 10px;
+    .description {
+      margin: 15px auto;
+      font-size: 1em;
+      line-height: 1.5;
+      max-width: 600px;
+      color: #4a4a4a;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
     }
 
     .buttons {
-      text-align: center;
-      margin: 20px 0;
-    }
-
-    .buttons a {
-      text-decoration: none;
-      color: white;
-      background-color: #8b5e3c;
-      padding: 10px 20px;
-      margin: 5px;
-      border-radius: 8px;
-      display: inline-block;
-      font-weight: bold;
-      box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-    }
-
-    h3.galeria-titulo {
-      text-align: center;
-      margin-top: 30px;
-      color: #4b2e1f;
-    }
-
-    .galeria {
+      margin-top: 20px;
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
+      flex-wrap: wrap;
       gap: 15px;
-      padding: 0 20px 30px;
     }
 
-    .galeria img {
-      width: 200px;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      border: 1px solid #c5a478;
+    .button {
+      background-color: #d8a86f;
+      color: #fff;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #c18a50;
+    }
+
+    @media (max-width: 600px) {
+      .profile-pic {
+        width: 100px;
+        height: 100px;
+      }
+
+      h1 {
+        font-size: 1.5em;
+      }
+
+      .subtitle {
+        font-size: 1em;
+      }
+
+      .description {
+        font-size: 0.95em;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <div class="header">
-      <h2>Alejandra Toledo</h2>
-      <p><em>Artista Visual & Creadora de Obras Decorativas</em></p>
-      <img src="https://i.postimg.cc/Y9RTyF75/foto-perfil.jpg" alt="Foto de perfil">
-    </div>
-    <div class="slogan">
-      <h3><strong>La historia detrás de cada trabajo</strong></h3>
-      <p>
-        Sí, es hermoso ver el valor emocional y la historia detrás de un objeto hecho a mano. 
-        Cada pieza es única y refleja la pasión, el esfuerzo y la dedicación de su creador. 
-        Comprar algo hecho a mano no es solo adquirir un objeto, sino también apoyar el trabajo 
-        personal del artista, y llevar contigo un pequeño pedacito de su historia.
+  <div class="container">
+    <div class="card">
+      <img class="profile-pic" src="https://i.postimg.cc/Y9RTyF75/foto-perfil.jpg" alt="Foto de perfil de Alejandra Toledo" />
+      <h1>Alejandra Toledo</h1>
+      <div class="subtitle">Artista visual & creadora de obras decorativas</div>
+      <div class="slogan">"La historia detrás de cada trabajo"</div>
+      <p class="description">
+        Sí, es hermoso ver el valor emocional y la historia detrás de un objeto hecho a mano. Cada pieza es única y refleja la pasión, el esfuerzo y la dedicación de su creador. Comprar algo hecho a mano no es solo adquirir un objeto, sino también apoyar el trabajo personal del artista, y llevar contigo un pequeño pedacito de su historia.
       </p>
-    </div>
-    <div class="buttons">
-      <a href="https://www.instagram.com/decomaderasnuevavida/?hl=es-la" target="_blank">Instagram</a>
-      <a href="https://wa.me/56997719028" target="_blank">WhatsApp</a>
-    </div>
-    <h3 class="galeria-titulo">Galería de Obras</h3>
-    <div class="galeria">
-      <img src="https://i.postimg.cc/h479sB0r/4dfbae86-f27c-4ded-b5d2-20725885e040.png" alt="obra1">
-      <img src="https://i.postimg.cc/YCXGkn30/foto-galeria-2.png" alt="obra2">
-      <img src="https://i.postimg.cc/VNdSNqGR/foto-galeria-3.png" alt="obra3">
-      <img src="https://i.postimg.cc/52tyP5VV/47a4378e-596f-4f5a-8cf3-2f32fe9ec94b.png" alt="obra4">
-      <img src="https://i.postimg.cc/k564CnGY/c37f9b15-2a6e-463d-8574-1b6fb90b5af1.png" alt="obra5">
-      <img src="https://i.postimg.cc/qR2vtj88/a3b41957-b2fd-4bfc-85b2-22da889728db.png" alt="obra6">
+
+      <div class="gallery">
+        <img src="https://i.postimg.cc/h479sB0r/4dfbae86-f27c-4ded-b5d2-20725885e040.png" alt="Galería 1" />
+        <img src="https://i.postimg.cc/YCXGkn30/foto-galeria-2.png" alt="Galería 2" />
+        <img src="https://i.postimg.cc/VNdSNqGR/foto-galeria-3.png" alt="Galería 3" />
+        <img src="https://i.postimg.cc/52tyP5VV/47a4378e-596f-4f5a-8cf3-2f32fe9ec94b.png" alt="Galería 4" />
+        <img src="https://i.postimg.cc/k564CnGY/c37f9b15-2a6e-463d-8574-1b6fb90b5af1.png" alt="Galería 5" />
+        <img src="https://i.postimg.cc/qR2vtj88/a3b41957-b2fd-4bfc-85b2-22da889728db.png" alt="Galería 6" />
+      </div>
+
+      <div class="buttons">
+        <a class="button" href="https://www.instagram.com/decomaderasnuevavida/?hl=es-la" target="_blank">Instagram</a>
+        <a class="button" href="https://wa.me/56997719028" target="_blank">Contactar</a>
+      </div>
     </div>
   </div>
 </body>
