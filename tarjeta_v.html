@@ -3,6 +3,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alejandra Toledo - Artista Visual</title>
   <style>
     body {
@@ -93,6 +94,47 @@
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
       border: 1px solid #c5a478;
     }
+    @media (max-width: 768px) {
+  .card {
+    margin: 20px;
+    width: 95%;
+  }
+
+  .header img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .slogan {
+    font-size: 14px;
+    padding: 15px;
+  }
+
+  .galeria {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    justify-items: center;
+    padding: 10px;
+  }
+
+  .galeria img {
+    width: 100%;
+    height: auto;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .buttons a {
+    width: 80%;
+    text-align: center;
+  }
+}
   </style>
 </head>
 <body>
