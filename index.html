@@ -134,7 +134,40 @@
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
   }  
- 
+   .modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    padding-top: 60px;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.85);
+  }
+
+  .modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.6);
+  }
+
+  .modal-content:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+  }
 </style>
 </head>
 <body>
@@ -167,47 +200,71 @@
     <div class="divider"></div>
     <h3 class="galeria-titulo">Galería de Obras</h3>
     <div class="galeria">
-      <img src="https://i.postimg.cc/h479sB0r/4dfbae86-f27c-4ded-b5d2-20725885e040.png" alt="obra1">
-      <img src="https://i.postimg.cc/YCXGkn30/foto-galeria-2.png" alt="obra2">
-      <img src="https://i.postimg.cc/VNdSNqGR/foto-galeria-3.png" alt="obra3">
-      <img src="https://i.postimg.cc/52tyP5VV/47a4378e-596f-4f5a-8cf3-2f32fe9ec94b.png" alt="obra4">
-      <img src="https://i.postimg.cc/k564CnGY/c37f9b15-2a6e-463d-8574-1b6fb90b5af1.png" alt="obra5">
-      <img src="https://i.postimg.cc/XqJzf8sD/96c3bd28-7b0a-4bcf-82cd-c48c159af3c3.png" alt="obra6">
-      <img src="https://i.postimg.cc/NFvgdwky/c652c73c-5e2d-4f20-8836-37a76bf38766.png" alt="obra7">
-      <img src="https://i.postimg.cc/TwCyS1hy/1c405b34-0b7e-4c03-baa0-1837c4f2932c.png" alt="obra8">
-      <img src="https://i.postimg.cc/xCMQJ4V9/82564773-2479-4822-92d0-ff7b2032edfb.png" alt="obra9">
-      <img src="https://i.postimg.cc/Y2RVnH3J/0cfcd0ee-04b7-4a2d-866c-306844d85253.png" alt="obra10">
-      <img src="https://i.postimg.cc/8CLXhQcX/sisi.png" alt="obra11">
-      <img src="https://i.postimg.cc/QNf4gqND/nono.png" alt="obra12">
-      <img src="https://i.postimg.cc/htNPXxQb/8ad96c89-ab0c-4f0e-a3bf-d8472dab0489.png" alt="obra13">
-      <img src="https://i.postimg.cc/J7FLTDjB/59960ed8-9faf-4df7-bc3f-4caeda3aebeb.png" alt="obra14">
-      <img src="https://i.postimg.cc/NfrwZsxC/f004c8f2-5b95-4994-b839-ac46cf08fc8d.png" alt="obra15">
-      <img src="https://i.postimg.cc/NFNQBrwX/e1176554-9e55-4eae-bf64-a510d167d5f6.png" alt="obra16">
-      <img src="https://i.postimg.cc/SK0kShHg/003b6da4-678e-4751-8939-2f22db4dcf6a.png" alt="obra17">
-      <img src="https://i.postimg.cc/wv2pQsMr/18982c66-264a-4cf3-940b-46752d1762b9.png" alt="obra18">
-      <img src="https://i.postimg.cc/fL2Pb7JM/3def2a4c-6c6f-45d2-9418-48678a171397.png" alt="obra19">
-      <img src="https://i.postimg.cc/ZR2LgwWv/45ac0fd9-ef62-420f-a6bc-11b692434e22.png" alt="obra20">
-      <img src="https://i.postimg.cc/GtHX8ppW/196b7002-0afd-4744-9da7-f434827c1124.png" alt="obra21">
-      <img src="https://i.postimg.cc/Y9S3ZSQv/3e96dfac-18d9-4b20-9aa3-fa5418d0e9f4.png" alt="obra22">
-      <img src="https://i.postimg.cc/VvrFsHG1/ced2dc83-692d-4df6-b141-48f134b0461d.png" alt="obra23">
-      <img src="https://i.postimg.cc/BncRGXPp/a8d33a35-8887-40e6-ba07-cb772e33a5ec-1.png" alt="obra24">
-      <img src="https://i.postimg.cc/dVq4rnDR/4528433c-20bc-47c0-bf15-c2917ea96a2d.png" alt="obra25">
-      <img src="https://i.postimg.cc/pTnZR61v/baf684de-4809-4d27-b3c8-05d5c5bb7630.png" alt="obra26">
-      <img src="https://i.postimg.cc/Qxqq85SF/0e4ce3f4-bc71-4831-94ec-97f445e6b6aa.png" alt="obra27">
-      <img src="https://i.postimg.cc/HLFwZtWh/bd6d9265-ca6a-437b-b2de-c6c030400abd.png" alt="obra28">
-      <img src="https://i.postimg.cc/Yqt1s0kM/7b2969c3-f1ab-467c-9a0d-80ca5de79267.png" alt="obra29">
-      <img src="https://i.postimg.cc/sXFW9DwF/7874118c-7bbd-4725-a6df-0ae79ea03542.png" alt="obra30">
-      <img src="https://i.postimg.cc/pdjhTMxs/1957ffd2-027b-4943-9261-6f991057b4f9.png" alt="obra31">
-      <img src="https://i.postimg.cc/8cYNMsmM/d0629eb6-de82-4992-952b-5620f5715878.png" alt="obra32">
-      <img src="https://i.postimg.cc/vH1QMLGz/e87ad677-925c-4fac-b12d-8ccaa1ef575b.png" alt="obra33">
-      <img src="https://i.postimg.cc/N0bhR5gF/18bb89b1-dfef-44c0-bf3d-d10a0689222f.png" alt="obra34">
-      <img src="https://i.postimg.cc/28FfCHPn/96764ba2-2dfd-4e30-8d60-005a67771b3a.png" alt="obra35">
-      <img src="https://i.postimg.cc/MGLC9gQJ/9c750fe5-1daf-423f-a7c2-14b6033cdc65.png" alt="obra36">      
+      <img src="https://i.postimg.cc/h479sB0r/4dfbae86-f27c-4ded-b5d2-20725885e040.png" alt="obra1" onclick="abrirModal(this.src)">
+      <img src="https://i.postimg.cc/YCXGkn30/foto-galeria-2.png" alt="obra2" onclick="abrirModal(this.src)">
+      <img src="https://i.postimg.cc/VNdSNqGR/foto-galeria-3.png" alt="obra3" onclick="abrirModal(this.src)">
+      <img src="https://i.postimg.cc/52tyP5VV/47a4378e-596f-4f5a-8cf3-2f32fe9ec94b.png" alt="obra4" onclick="abrirModal(this.src)">
+      <img src="https://i.postimg.cc/k564CnGY/c37f9b15-2a6e-463d-8574-1b6fb90b5af1.png" alt="obra5" onclick="abrirModal(this.src)">
+      <img src="https://i.postimg.cc/XqJzf8sD/96c3bd28-7b0a-4bcf-82cd-c48c159af3c3.png" alt="obra6" onclick="abrirModal(this.src)">
+      <img src="https://i.postimg.cc/NFvgdwky/c652c73c-5e2d-4f20-8836-37a76bf38766.png" alt="obra7" onclick="abrirModal(this.src)">
+      <img src="https://i.postimg.cc/TwCyS1hy/1c405b34-0b7e-4c03-baa0-1837c4f2932c.png" alt="obra8" onclick="abrirModal(this.src)">
+      <img src="https://i.postimg.cc/xCMQJ4V9/82564773-2479-4822-92d0-ff7b2032edfb.png" alt="obra9" onclick="abrirModal(this.src)">
+      <img src="https://i.postimg.cc/Y2RVnH3J/0cfcd0ee-04b7-4a2d-866c-306844d85253.png" alt="obra10" onclick="abrirModal(this.src)">
+      <img src="https://i.postimg.cc/8CLXhQcX/sisi.png" alt="obra11" onclick="abrirModal(this.src)">
+      <img src="https://i.postimg.cc/QNf4gqND/nono.png" alt="obra12" onclick="abrirModal(this.src)">
+      <img src="https://i.postimg.cc/htNPXxQb/8ad96c89-ab0c-4f0e-a3bf-d8472dab0489.png" alt="obra13" onclick="abrirModal(this.src)">
+      <img src="https://i.postimg.cc/J7FLTDjB/59960ed8-9faf-4df7-bc3f-4caeda3aebeb.png" alt="obra14" onclick="abrirModal(this.src)">
+      <img src="https://i.postimg.cc/NfrwZsxC/f004c8f2-5b95-4994-b839-ac46cf08fc8d.png" alt="obra15" onclick="abrirModal(this.src)">
+      <img src="https://i.postimg.cc/NFNQBrwX/e1176554-9e55-4eae-bf64-a510d167d5f6.png" alt="obra16" onclick="abrirModal(this.src)">
+      <img src="https://i.postimg.cc/SK0kShHg/003b6da4-678e-4751-8939-2f22db4dcf6a.png" alt="obra17" onclick="abrirModal(this.src)">
+      <img src="https://i.postimg.cc/wv2pQsMr/18982c66-264a-4cf3-940b-46752d1762b9.png" alt="obra18" onclick="abrirModal(this.src)">
+      <img src="https://i.postimg.cc/fL2Pb7JM/3def2a4c-6c6f-45d2-9418-48678a171397.png" alt="obra19" onclick="abrirModal(this.src)">
+      <img src="https://i.postimg.cc/ZR2LgwWv/45ac0fd9-ef62-420f-a6bc-11b692434e22.png" alt="obra20" onclick="abrirModal(this.src)">
+      <img src="https://i.postimg.cc/GtHX8ppW/196b7002-0afd-4744-9da7-f434827c1124.png" alt="obra21" onclick="abrirModal(this.src)">
+      <img src="https://i.postimg.cc/Y9S3ZSQv/3e96dfac-18d9-4b20-9aa3-fa5418d0e9f4.png" alt="obra22" onclick="abrirModal(this.src)">
+      <img src="https://i.postimg.cc/VvrFsHG1/ced2dc83-692d-4df6-b141-48f134b0461d.png" alt="obra23" onclick="abrirModal(this.src)">
+      <img src="https://i.postimg.cc/BncRGXPp/a8d33a35-8887-40e6-ba07-cb772e33a5ec-1.png" alt="obra24" onclick="abrirModal(this.src)">
+      <img src="https://i.postimg.cc/dVq4rnDR/4528433c-20bc-47c0-bf15-c2917ea96a2d.png" alt="obra25" onclick="abrirModal(this.src)">
+      <img src="https://i.postimg.cc/pTnZR61v/baf684de-4809-4d27-b3c8-05d5c5bb7630.png" alt="obra26" onclick="abrirModal(this.src)">
+      <img src="https://i.postimg.cc/Qxqq85SF/0e4ce3f4-bc71-4831-94ec-97f445e6b6aa.png" alt="obra27" onclick="abrirModal(this.src)">
+      <img src="https://i.postimg.cc/HLFwZtWh/bd6d9265-ca6a-437b-b2de-c6c030400abd.png" alt="obra28" onclick="abrirModal(this.src)">
+      <img src="https://i.postimg.cc/Yqt1s0kM/7b2969c3-f1ab-467c-9a0d-80ca5de79267.png" alt="obra29" onclick="abrirModal(this.src)">
+      <img src="https://i.postimg.cc/sXFW9DwF/7874118c-7bbd-4725-a6df-0ae79ea03542.png" alt="obra30" onclick="abrirModal(this.src)">
+      <img src="https://i.postimg.cc/pdjhTMxs/1957ffd2-027b-4943-9261-6f991057b4f9.png" alt="obra31" onclick="abrirModal(this.src)">
+      <img src="https://i.postimg.cc/8cYNMsmM/d0629eb6-de82-4992-952b-5620f5715878.png" alt="obra32" onclick="abrirModal(this.src)">
+      <img src="https://i.postimg.cc/vH1QMLGz/e87ad677-925c-4fac-b12d-8ccaa1ef575b.png" alt="obra33" onclick="abrirModal(this.src)">
+      <img src="https://i.postimg.cc/N0bhR5gF/18bb89b1-dfef-44c0-bf3d-d10a0689222f.png" alt="obra34" onclick="abrirModal(this.src)">
+      <img src="https://i.postimg.cc/28FfCHPn/96764ba2-2dfd-4e30-8d60-005a67771b3a.png" alt="obra35" onclick="abrirModal(this.src)">
+      <img src="https://i.postimg.cc/MGLC9gQJ/9c750fe5-1daf-423f-a7c2-14b6033cdc65.png" alt="obra36" onclick="abrirModal(this.src)">
     </div>
   <a href="#" style="display:block; text-align:center; margin: 30px auto; color: #8b5e3c; font-weight: bold; font-size: 16px;">⬆️ Volver arriba</a>
 
   <footer style="text-align:center; padding: 10px; color:#8b5e3c; font-size:14px;">
   © 2025 Alejandra Toledo — Arte con Vida & Emoción
   </footer>
+<div id="miModal" class="modal">
+  <span class="close" onclick="cerrarModal()">&times;</span>
+  <img class="modal-content" id="imgModal">
+</div>
+<script>
+function abrirModal(src) {
+  const modal = document.getElementById("miModal");
+  const img = document.getElementById("imgModal");
+  img.src = src;
+  modal.style.display = "block";
+}
+
+function cerrarModal() {
+  document.getElementById("miModal").style.display = "none";
+}
+
+// Cerrar al hacer click fuera de la imagen
+window.onclick = function(event) {
+  const modal = document.getElementById("miModal");
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+}
+</script>  
 </body>
 </html>
