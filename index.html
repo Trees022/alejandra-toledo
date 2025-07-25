@@ -138,32 +138,28 @@
     display: none;
     position: fixed;
     z-index: 9999;
-    padding-top: 60px;
-    left: 0; top: 0;
-    width: 100%; height: 100%;
+    padding-top: 50px;
+    left: 0; 
+    top: 0;
+    width: 100vw; 
+    height: 100vw;
     overflow: auto;
-    background-color: rgba(0,0,0,0.85);
+    background-color: rgba(0,0,0,0.8);
   }
 
   .modal-content {
     margin: auto;
     display: block;
-    max-width: 90%;
+    max-width: 90vw;
     max-height: 80vh;
-    border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.6);
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out;
   }
-
-  .modal-content:hover {
-    transform: none;
-    box-shadow: none;
-  }
-
   .close {
     position: absolute;
-    top: 20px;
-    right: 35px;
-    color: #fff;
+    top: 15px;
+    right: 30px;
+    color: white;
     font-size: 40px;
     font-weight: bold;
     cursor: pointer;
@@ -242,29 +238,32 @@
   <footer style="text-align:center; padding: 10px; color:#8b5e3c; font-size:14px;">
   © 2025 Alejandra Toledo — Arte con Vida & Emoción
   </footer>
+  
 <div id="miModal" class="modal">
   <span class="close" onclick="cerrarModal()">&times;</span>
   <img class="modal-content" id="imgModal">
 </div>
+  
 <script>
-function abrirModal(src) {
-  const modal = document.getElementById("miModal");
-  const img = document.getElementById("imgModal");
-  img.src = src;
-  modal.style.display = "block";
-}
-
-function cerrarModal() {
-  document.getElementById("miModal").style.display = "none";
-}
-
-// Cerrar al hacer click fuera de la imagen
-window.onclick = function(event) {
-  const modal = document.getElementById("miModal");
-  if (event.target === modal) {
-    modal.style.display = "none";
+  function abrirModal(src) {
+    var modal = document.getElementById("miModal");
+    var imagenModal = document.getElementById("imagenModal");
+    modal.style.display = "block";
+    imagenModal.src = src;
   }
-}
-</script>  
+
+  function cerrarModal() {
+    document.getElementById("miModal").style.display = "none";
+  }
+
+  // Cierra el modal al hacer clic fuera de la imagen
+  window.onclick = function(event) {
+    var modal = document.getElementById("miModal");
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+  
 </body>
 </html>
