@@ -134,42 +134,29 @@
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
   }  
-  .modal {
-    display: none; /* oculto por defecto */
+  .modal-simple {
     position: fixed;
-    z-index: 1000;
-    left: 0;
     top: 0;
+    left: 0;
     width: 100vw;
     height: 100vh;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.8); /* fondo negro semitransparente */
+    background: rgba(0,0,0,0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    padding: 10px;
   }
-  body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow-x: hidden;
-}
-  .modal-content {
-    margin: auto;
-    display: block;
-    width: 90%;
-    max-width: 700px;
-    max-height: 90vh;
-    object-fit: contain;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
-    transition: transform 0.3s ease;
+
+.modal-simple img {
+    max-width: 100%;
+    max-height: 100%;
     border-radius: 10px;
-}
-  .close {
-    position: absolute;
-    top: 15px;
-    right: 30px;
-    color: white;
-    font-size: 40px;
-    font-weight: bold;
-    cursor: pointer;
+    box-shadow: 0 0 20px rgba(255,255,255,0.2);
+  }
+
+.modal-simple:active {
+    cursor: zoom-out;
   }
 </style>
 </head>
@@ -246,29 +233,18 @@
   © 2025 Alejandra Toledo — Arte con Vida & Emoción
   </footer>
   
-<div id="miModal" class="modal">
-  <span class="close" onclick="cerrarModal()">&times;</span>
-  <img class="modal-content" id="imagenModal">
+<div id="modalZoom" class="modal-simple" style="display: none;" onclick="cerrarZoom()">
+  <img id="modalZoomImg" src="" alt="Imagen ampliada">
 </div>
   
 <script>
   function abrirModal(src) {
-    var modal = document.getElementById("miModal");
-    var imagenModal = document.getElementById("imagenModal");
-    modal.style.display = "block";
-    imagenModal.src = src;
+    document.getElementById("modalZoomImg").src = src;
+    document.getElementById("modalZoom").style.display = "flex";
   }
 
-  function cerrarModal() {
-    document.getElementById("miModal").style.display = "none";
-  }
-
-  // Cierra el modal al hacer clic fuera de la imagen
-  window.onclick = function(event) {
-    var modal = document.getElementById("miModal");
-    if (event.target === modal) {
-      modal.style.display = "none";
-    }
+  function cerrarZoom() {
+    document.getElementById("modalZoom").style.display = "none";
   }
 </script>
   
