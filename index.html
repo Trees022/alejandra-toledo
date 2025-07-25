@@ -149,13 +149,17 @@
   }
 
 .modal-simple img {
-  max-width: 95vw;
-  max-height: 90vh;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(255,255,255,0.2);
-  transform: scale(1.2); /* antes estaba 1.05, ahora 1.2 para un +15% aprox */
-  transition: transform 0.3s ease;
-}
+    max-width: 90vw;
+    max-height: 85vh;
+    width: auto;
+    height: auto;
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.2);
+    transform: scale(1); /* quita el zoom que podía hacer que se saliera */
+    transition: transform 0.3s ease;
+  }
 
 /* ✅ Botón de cerrar más visible, más abajo */
 .btn-cerrar {
