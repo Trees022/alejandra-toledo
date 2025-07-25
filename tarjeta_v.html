@@ -7,103 +7,120 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alejandra Toled - Artista Visual</title>
   <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f4f1ec;
-    }
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f1ec;
+  }
 
-    .card {
-      max-width: 700px;
-      margin: 40px auto;
-      background-color: #ffffffcc;
-      border-radius: 15px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-      overflow: hidden;
-      border: 2px solid #8b5e3c;
-    }
+  .card {
+    max-width: 700px;
+    margin: 40px auto;
+    background-color: #ffffffcc;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    overflow: hidden;
+    border: 2px solid #8b5e3c;
+  }
 
-    .header {
-      background-color: #8b5e3c;
-      padding: 25px;
-      color: white;
-      text-align: center;
-    }
+  .header {
+    background-color: #8b5e3c;
+    padding: 25px;
+    color: white;
+    text-align: center;
+  }
 
-    .header img {
-      width: 120px;
-      height: 120px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 4px solid white;
-      margin-top: 15px;
-    }
+  .slogan {
+    padding: 20px;
+    background-color: #f1f1f1;
+    text-align: center;
+  }
 
-    .slogan {
-      padding: 20px;
-      background-color: #f1f1f1;
-      text-align: center;
-    }
+  .foto-video {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+  }
 
-    .slogan h3 {
-      font-style: italic;
-      color: #5a3825;
-    }
+  .foto-perfil {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid white;
+  }
 
-    .slogan p {
-      font-size: 15px;
-      color: #3c2b21;
-      line-height: 1.6;
-      margin-top: 10px;
-    }
+  .video-perfil {
+    width: 300px;
+    height: 170px;
+    border-radius: 10px;
+  }
 
-    .buttons {
-      text-align: center;
-      margin: 20px 0;
-    }
+  .slogan h3 {
+    font-style: italic;
+    color: #5a3825;
+  }
 
-    .buttons a {
-      text-decoration: none;
-      color: white;
-      background-color: #8b5e3c;
-      padding: 10px 20px;
-      margin: 5px;
-      border-radius: 8px;
-      display: inline-block;
-      font-weight: bold;
-      box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-    }
+  .slogan p {
+    font-size: 15px;
+    color: #3c2b21;
+    line-height: 1.6;
+    margin-top: 10px;
+  }
 
-    h3.galeria-titulo {
-      text-align: center;
-      margin-top: 30px;
-      color: #4b2e1f;
-    }
+  .buttons {
+    text-align: center;
+    margin: 20px 0;
+  }
 
-    .galeria {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-      padding: 0 20px 30px;
-    }
+  .buttons a {
+    text-decoration: none;
+    color: white;
+    background-color: #8b5e3c;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 8px;
+    display: inline-block;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+  }
 
-    .galeria img {
-      width: 200px;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      border: 1px solid #c5a478;
-    }
-  </style>
+  h3.galeria-titulo {
+    text-align: center;
+    margin-top: 30px;
+    color: #4b2e1f;
+  }
+
+  .galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 0 20px 30px;
+  }
+
+  .galeria img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border: 1px solid #c5a478;
+  }
+</style>
 </head>
 <body>
-  <div class="card">
-    <div class="header">
-      <h2 style="font-family: 'Great Vibes', cursive; font-size: 38px;">Alejandra Toledo</h2>
-      <p><em>Artista Visual & Creadora de Obras Decorativas</em></p>
-      <img src="https://i.postimg.cc/XvMyyXrF/fd42471e-8eb3-4968-a3ed-27f1be2d18e9.jpg" alt="Foto de perfil">
-    </div>
+<div class="header">
+  <h2 style="font-family: 'Great Vibes', cursive; font-size: 38px;">Alejandra Toledo</h2>
+  <p><em>Artista Visual & Creadora de Obras Decorativas</em></p>
+</div>
+<div class="foto-video">
+  <img src="https://i.postimg.cc/XvMyyXrF/fd42471e-8eb3-4968-a3ed-27f1be2d18e9.jpg" alt="Foto de perfil" class="foto-perfil">
+  <iframe class="video-perfil" src="https://www.youtube.com/watch?v=54ZXQPg-tmM" title="Video de presentación"
+    frameborder="0" allowfullscreen></iframe>
+</div>
     <div class="slogan">
       <h3><strong>La historia detrás de cada trabajo</strong></h3>
       <p>
