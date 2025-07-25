@@ -134,19 +134,23 @@
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
   }  
-   .modal {
-    display: none;
+  .modal {
+    display: none; /* oculto por defecto */
     position: fixed;
-    z-index: 9999;
-    padding-top: 50px;
-    left: 0; 
+    z-index: 1000;
+    left: 0;
     top: 0;
-    width: 100vw; 
-    height: 100vw;
+    width: 100vw;
+    height: 100vh;
     overflow: auto;
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0,0,0,0.8); /* fondo negro semitransparente */
   }
-
+  body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
   .modal-content {
     margin: auto;
     display: block;
