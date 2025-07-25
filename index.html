@@ -248,8 +248,10 @@
   </footer>
   
 <div id="modalZoom" class="modal-simple" style="display: none;" onclick="cerrarZoom()">
+  <button class="btn-cerrar" onclick="cerrarZoom(); event.stopPropagation();">✖</button>
   <img id="modalZoomImg" src="" alt="Imagen ampliada">
 </div>
+
   
 <script>
   function abrirModal(src) {
